@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import GPUImage
 
 class ViewController: UIViewController {
 
     /// 调节美颜效果页面底部控制约束
     @IBOutlet weak var beautyViewBottomCons: NSLayoutConstraint!
+    /// 记录切换美颜效果调节页面按钮
     fileprivate var selectedButton: UIButton?
+    
+    // MARK: 懒加载
+    // 视频源
+//    fileprivate lazy var camera:
     override func viewDidLoad() {
         super.viewDidLoad()
     }
