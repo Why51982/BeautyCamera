@@ -68,8 +68,8 @@ class ViewController: UIViewController {
         let filterGroup = getGroupFilters()
         
         // 设置GPUImage的响应链
-        camera.addTarget(filterGroup)
-        filterGroup.addTarget(preview)
+        camera.addTarget(filterGroup)           // 相机添加滤镜
+        filterGroup.addTarget(preview)          // 滤镜添加预览图层
         
         // 开始采集视频
         camera.startCapture()
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         movieWriter.encodingLiveVideo = true
         
         // 2)将movieWriter设置成滤镜的target
-        filterGroup.addTarget(movieWriter)
+        filterGroup.addTarget(movieWriter)      // 滤镜组添加写入对象
         
         // 3)设置camera的编码
         camera.delegate = self
